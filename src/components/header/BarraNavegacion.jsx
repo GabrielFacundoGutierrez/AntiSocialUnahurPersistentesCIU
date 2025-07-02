@@ -1,0 +1,34 @@
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { useUser } from "../../context/UserContext";
+
+const BarraNavegacion = () => {
+  const { user, logout } = useUser();
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div className="container-fluid px-5">
+        <Link to="/" className="navbar-brand d-flex align-items-center gap-2">
+          <span className="fs-4 fw-semibold">AntiSocialUnahur</span>
+        </Link>
+        <div className="d-flex ms-auto gap-3">
+           {user ? (
+            <>
+              <Link to="/profile" className="btn btn-outline-light">Perfil</Link>
+              <button onClick={logout} className="btn btn-outline-light">Cerrar sesión</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="btn btn-outline-light">Iniciar sesión</Link>
+              <Link to="/register" className="btn btn-outline-light">Registrarse</Link>
+            </>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default BarraNavegacion;
+
+
