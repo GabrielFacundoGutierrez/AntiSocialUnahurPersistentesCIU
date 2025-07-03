@@ -55,6 +55,7 @@ El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red so
 1. Clonar el repositorio.
 2. Instalar las dependencias con `npm install`.
 3. Ejecutar el servidor de desarrollo con `npm run dev`.
-4. Asegurarse de tener corriendo el backend en `http://localhost:3000/`.
+4. Instalar API del repositorio `https://github.com/EP-UnaHur-2025C1/anti-social-mongo-persistentes`.
+5. Asegurarse de tener corriendo el backend en `http://localhost:3000/`.
 
 ---
