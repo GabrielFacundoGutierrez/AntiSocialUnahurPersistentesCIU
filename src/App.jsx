@@ -4,29 +4,34 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import PostDetail from "./pages/PostDetail";
 import Home from "./pages/Home";
-
-
-
-
+import Register from "./pages/Register"
+import NewPost from "./pages/NewPost"
 
 
 function App() {
   return (
-    
+
     <div className="d-flex flex-column min-vh-100 bg-light">
-        <BarraNavegacion />
+      <BarraNavegacion />
       <div className="container mt-5 pt-5">
-        <Routes>
+        {<Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/post/:id" element={<PostDetail />} />
-          
-        </Routes>
+          <Route path="/Register" element={<Register />} />
+          <Route path="/NewPost" element={<NewPost />} />
+
+
+
+        </Routes>}
+
       </div>
-      </div>
-    
+    </div>
+
   )
 }
 
 export default App
+

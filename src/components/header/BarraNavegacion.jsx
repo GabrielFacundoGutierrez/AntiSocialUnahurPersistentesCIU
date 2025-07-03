@@ -15,12 +15,13 @@ const BarraNavegacion = () => {
            {user ? (
             <>
               <Link to="/profile" className="btn btn-outline-light">Perfil</Link>
-              <button onClick={logout} className="btn btn-outline-light">Cerrar sesión</button>
+              <Link to="/NewPost" className="btn btn-outline-light">Nuevo Posteo</Link>
             </>
           ) : (
             <>
               <Link to="/login" className="btn btn-outline-light">Iniciar sesión</Link>
               <Link to="/register" className="btn btn-outline-light">Registrarse</Link>
+              
             </>
           )}
         </div>

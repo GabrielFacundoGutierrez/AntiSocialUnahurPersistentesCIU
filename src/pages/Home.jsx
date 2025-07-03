@@ -11,6 +11,7 @@ export default function Home() {
       .catch(err => console.error("Error cargando publicaciones:", err));
   }, []);
 
+
   return (
     <div>
       <h2>Publicaciones Recientes</h2>

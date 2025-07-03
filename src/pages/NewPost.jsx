@@ -20,11 +20,11 @@ export default function NewPost() {
   if (!user) return <Navigate to="/login" />;
 
   const handleTagChange = (e) => {
-    const tagId = e.target.value;
+    const tagName = e.target.value;
     if (e.target.checked) {
-      setSelectedTags([...selectedTags, tagId]);
+      setSelectedTags([...selectedTags, tagName]);
     } else {
-      setSelectedTags(selectedTags.filter(id => id !== tagId));
+      setSelectedTags(selectedTags.filter(name => name !== tagName));
     }
   };
 
@@ -36,12 +36,11 @@ export default function NewPost() {
     e.preventDefault();
 
     try {
-      
+
       const nuevaPublicacion = {
         Descripcion: descripcion,
         FechaDeCreacion: new Date().toISOString(),
         usuario: user._id,
-        etiquetas: selectedTags
       };
 
       const postRes = await fetch("http://localhost:3000/post", {
@@ -50,11 +49,54 @@ export default function NewPost() {
         body: JSON.stringify(nuevaPublicacion)
       });
 
-      if (!postRes.ok) throw new Error("No se pudo crear el post");
-
       const postCreado = await postRes.json();
 
-      
+
+
+
+      async function agregarEtiquetasAlPost(postId, selectedTags) {
+        try {
+
+          const resultados = await Promise.all(
+            selectedTags.map(async (element) => {
+              const etiqueta = {
+                etiquetas: element
+              };
+              const tagRes = await fetch(`http://localhost:3000/post/addTag/${postId}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(etiqueta)
+              });
+
+              if (!tagRes.ok) {
+                throw new Error(`Error al agregar etiqueta ${element}`);
+              }
+              return tagRes.json();
+            })
+          );
+
+          
+          return resultados;
+        } catch (error) {
+         
+          throw error;
+        }
+      }
+
+      // Uso:
+      await agregarEtiquetasAlPost(postCreado._id, selectedTags);
+
+
+
+      //if (!postRes.ok) throw new Error("No se pudo crear el post");
+      if (!postRes.ok) {
+        const errorText = await postRes.text();
+        throw new Error("No se pudo crear el post: " + errorText);
+      }
+
+
+
+
       for (const img of imagenes) {
         const formData = new FormData();
         formData.append("posteo", postCreado._id);
@@ -109,7 +151,7 @@ export default function NewPost() {
         <input type="file" multiple onChange={handleImageChange} />
       </div>
 
-      <button type="submit">Publicar</button>
+      <button className="btn btn-primary">Publicar</button>
     </form>
   );
 }
