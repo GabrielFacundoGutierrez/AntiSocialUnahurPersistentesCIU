@@ -6,10 +6,11 @@ import { useUser } from "../../context/UserContext";
 const BarraNavegacion = () => {
   const { user, logout } = useUser();
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid px-5">
+        <img src="src\assets\Logo.png" alt="logo" className = "logo"/>
         <Link to="/" className="navbar-brand d-flex align-items-center gap-2">
-          <span className="fs-4 fw-semibold">AntiSocialUnahur</span>
+          <span className="fs-4 fw-semibold">Unahur AntiSocial</span>
         </Link>
         <div className="d-flex ms-auto gap-3">
            {user ? (

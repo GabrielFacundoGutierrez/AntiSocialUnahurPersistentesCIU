@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Paginado from "../components/paginacion";
+import { useUser } from "../context/UserContext"
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
+  const { user } = useUser();
 
   useEffect(() => {
     fetch("http://localhost:3000/post")
@@ -22,13 +24,13 @@ export default function Home() {
   // Cambiar página
   const cambiarPagina = (numeroPagina) => setPaginaActual(numeroPagina);
 
-  
-  return (
-     
 
-   <div className="contenedor-home">
+  return (
+
+
+    <div className="contenedor-home">
       <h2 className="encabezado-principal">Publicaciones Recientes</h2>
-      
+
       {posts.length === 0 ? (
         <p>No hay publicaciones aún.</p>
       ) : (
@@ -50,7 +52,22 @@ export default function Home() {
                   <p>By: {post.usuario.nickName}</p>
                   <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
                   <p>{post.comentarios?.length || 0} comentario(s)</p>
-                  <Link to={`/post/${post._id}`} className="btn btn-primary">Ver más</Link>
+                  <Link
+                    to={`/post/${post._id}`}
+                    className='btn btn-primary'
+                    onClick={(e) => {
+                      if (!user) {
+                        e.preventDefault();
+                       
+                        e.target.classList.add('btn-danger');
+                        setTimeout(() => {
+                          e.target.classList.remove('btn-danger');
+                        }, 500);
+                      }
+                    }}
+                  >
+                    Ver más
+                  </Link>
                 </div>
 
                 <div className="imagenes-posteos">
@@ -70,7 +87,7 @@ export default function Home() {
           <div className="paginacion">
             {Array.from({ length: Math.ceil(posts.length / postsPorPagina) }).map((_, index) => (
               <button
-                
+
                 key={index}
                 onClick={() => cambiarPagina(index + 1)}
                 className={paginaActual === index + 1 ? 'active btn btn-primary' : 'btn btn-secondary'}
