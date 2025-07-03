@@ -7,6 +7,7 @@ import PostDetail from "./pages/PostDetail";
 import Home from "./pages/Home";
 import Register from "./pages/Register"
 import NewPost from "./pages/NewPost"
+import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
 
 
 function App() {
@@ -18,11 +19,11 @@ function App() {
         {<Routes>
 
           <Route path="/" element={<Home />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/post/:id" element={<PostDetail />} />
+          <Route path="/post/:id" element={<PrivateRoute><PostDetail /></PrivateRoute>} />
           <Route path="/Register" element={<Register />} />
-          <Route path="/NewPost" element={<NewPost />} />
+          <Route path="/NewPost" element={<PrivateRoute><NewPost /></PrivateRoute>} />
 
 
 

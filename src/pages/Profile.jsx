@@ -28,11 +28,11 @@ export default function Profile() {
       <button onClick={() => logout()} className="btn btn-danger mb-4 cerrar-sesion">
         Cerrar sesión
       </button>
-      <h2 className="mb-3 publicaciones-encabezado">Mis Publicaciones</h2>
+      <h2 className="publicaciones-encabezado">Mis Publicaciones</h2>
       {posts.length === 0 ? (
         <p>No has publicado nada todavía.</p>
       ) : (
-        posts.map(post => (
+          <div> {posts.map(post => (
           <div key={post._id} className="card p-3 mb-3 shadow-sm">
             <h4>{post.Descripcion}</h4>
             <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
@@ -58,7 +58,8 @@ export default function Profile() {
               Ver más
             </Link>
           </div>
-        ))
+        ))}
+        </div>
       )
       }
     </div >
