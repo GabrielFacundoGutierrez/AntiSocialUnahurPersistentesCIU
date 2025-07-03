@@ -1,3 +1,5 @@
+
+
 .encabezado-principal {
   text-align: left;
   width: 100%;
@@ -8,10 +10,11 @@
 .posteo { 
    border: "1px solid #ccc";
    margin: "1em 0"; 
-   padding: "3em";
+   padding: "10px";
    display: flex;
    justify-content: space-between;
    align-items: center;
+   box-shadow: 0 0 3px 0 #000;
   
  }
 
@@ -26,7 +29,8 @@
 }
 
 .info {
-  width: 350px;
+  width: 330px;
+  margin: 10px;
 }
 
 .imagenes-posteos {

@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from "react";
 import { useUser } from "../context/UserContext";
 import { Navigate, Link } from "react-router-dom";
@@ -34,7 +36,8 @@ export default function Profile() {
         <p>No has publicado nada todavía.</p>
       ) : (
           <div className="publicaciones"> {posts.map(post => (
-          <div key={post._id} className="card p-3 mb-3 shadow-sm">
+          <div key={post._id} className="tarjetiña">
+            <div className = "infoTarjetiña">
             <h4>{post.Descripcion}</h4>
             <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
 
@@ -46,7 +49,8 @@ export default function Profile() {
                 ))}
               </p>
             )}
-
+            </div>
+            <div className = "imgTarjetiña"> 
             {post.imagenes?.length > 0 && (
               <div className="mb-2">
                 {post.imagenes.map((img, i) => (
@@ -54,10 +58,13 @@ export default function Profile() {
                 ))}
               </div>
             )}
+            </div>
+            <div className = "pieTarjetiña">
             <p>{post.comentarios?.length || 0} comentario(s)</p>
             <Link to={`/post/${post._id}`} className="btn btn-primary">
               Ver más
             </Link>
+            </div>
           </div>
         ))}
         </div>
