@@ -1,0 +1,43 @@
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.author {
+  width: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: #077;
+  border-radius: 17px;
+}
+
+.name {
+  color: whitesmoke
+}
+
+img {
+  width: 150px;
+  border-radius: 17px;
+}
+
+.titulo {
+  color: whitesmoke
+}
+
+.copy {
+  color: whitesmoke
+}

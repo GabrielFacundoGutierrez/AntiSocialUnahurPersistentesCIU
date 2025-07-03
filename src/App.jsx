@@ -1,4 +1,5 @@
 import BarraNavegacion from "./components/header/BarraNavegacion";
+import PieDePagina from "./components/footer/PieDePagina";
 import { Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -11,7 +12,7 @@ import NewPost from "./pages/NewPost"
 function App() {
   return (
 
-    <div className="d-flex flex-column min-vh-100 bg-light">
+    <div className="bg-light">
       <BarraNavegacion />
       <div className="container mt-5 pt-5">
         {<Routes>
@@ -25,9 +26,10 @@ function App() {
 
 
 
-        </Routes>}
 
+        </Routes>}
       </div>
+      <PieDePagina />
     </div>
 
   )
