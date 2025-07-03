@@ -83,8 +83,9 @@ El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red so
 3. Ejecutar el servidor de desarrollo con `npm run dev`.
 4. Instalar API del repositorio `https://github.com/EP-UnaHur-2025C1/anti-social-mongo-persistentes`.
 5. Asegurarse de tener corriendo el backend en `http://localhost:3000/`.
-6. Agregar el archivo seed.js en la raíz del proyecto del backend.
-7. Ejecutar el siguiente comando para poblar la base de datos:
+6. Sacar el archivo Scripts.rar de la raiz del proyecto de front-end y extraerlo.
+7. Agregar el archivo seed.js en la raíz del proyecto del backend.
+8. Ejecutar el siguiente comando para poblar la base de datos:
 
 ```
 node seed.js
