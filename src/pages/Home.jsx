@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
-
+  
   useEffect(() => {
     fetch("http://localhost:3000/post")
       .then(res => res.json())
       .then(data => setPosts(data))
       .catch(err => console.error("Error cargando publicaciones:", err));
   }, []);
-
+   
 
   return (
     <div>
