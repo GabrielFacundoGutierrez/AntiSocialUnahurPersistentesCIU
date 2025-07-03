@@ -24,7 +24,7 @@ export default function Profile() {
   return (
 
     <div className="perfil-encabezado">
-      <h1 className="encabezado">Bienvenido: {user.nickName}</h1>
+      <h1 className="perfil-titulo">Bienvenido: {user.nickName}</h1>
       <button onClick={() => logout()} className="btn btn-danger mb-4 cerrar-sesion">
         Cerrar sesión
       </button>
@@ -32,7 +32,7 @@ export default function Profile() {
       {posts.length === 0 ? (
         <p>No has publicado nada todavía.</p>
       ) : (
-          <div> {posts.map(post => (
+          <div className="publicaciones"> {posts.map(post => (
           <div key={post._id} className="card p-3 mb-3 shadow-sm">
             <h4>{post.Descripcion}</h4>
             <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>

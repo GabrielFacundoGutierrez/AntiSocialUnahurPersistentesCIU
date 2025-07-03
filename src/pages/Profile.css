@@ -1,4 +1,5 @@
 .perfil-encabezado {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,17 +9,26 @@
 .perfil-titulo {
   text-align: center;
   color: #000;
-  background-color: eee;
+  background-color: #eee;
   width: 100vw;
   height: 300px;
 }
 
 .cerrar-sesion {
-  position: absolute;
+  position: fixed;
   bottom: 5vh;
   right: 5vw
 }
 
 .publicaciones-encabezado {
   text-align: left;
+}
+
+.publicaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4vw;
+  gap: 15px;
 }
