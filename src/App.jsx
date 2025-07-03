@@ -32,7 +32,7 @@ function App() {
 
         </Routes>}
       </div>
-      <ToggleTheme />
+      {/* <ToggleTheme /> */}
       <PieDePagina />
     </div>
 
