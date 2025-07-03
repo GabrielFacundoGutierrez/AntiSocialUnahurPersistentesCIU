@@ -6,13 +6,6 @@ footer {
   align-items: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .author {
   width: 175px;
   display: flex;

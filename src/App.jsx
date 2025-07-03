@@ -1,5 +1,6 @@
 import BarraNavegacion from "./components/header/BarraNavegacion";
 import PieDePagina from "./components/footer/PieDePagina";
+import ToggleTheme from "./components/toggle-theme/ToggleTheme"
 import { Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -30,6 +31,7 @@ function App() {
 
         </Routes>}
       </div>
+      <ToggleTheme />
       <PieDePagina />
     </div>
 

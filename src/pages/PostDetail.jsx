@@ -53,6 +53,7 @@ export default function PostDetail() {
   return (
     <div style={{ padding: "1em" }}>
       <h2>{post.Descripcion}</h2>
+      <p>By: {post.usuario.nickName}</p>
       <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
 
       {/* Etiquetas */}

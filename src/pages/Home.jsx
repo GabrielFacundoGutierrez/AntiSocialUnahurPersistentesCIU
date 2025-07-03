@@ -32,8 +32,8 @@ export default function Home() {
             )}
 
             <h4>{post.Descripcion}</h4>
+            <p>By: {post.usuario.nickName}</p>
             <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
-
             <p>{post.comentarios?.length || 0} comentario(s)</p>
             <Link to={`/post/${post._id}`} className="btn btn-primary">Ver más</Link>
             </div>
