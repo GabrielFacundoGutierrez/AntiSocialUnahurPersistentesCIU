@@ -90,7 +90,7 @@ El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red so
 node seed.js
 ```
 ---
-##🧑‍💻 Autores
+## 🧑‍💻Autores
 
 Proyecto académico desarrollado en el marco de la Universidad Nacional de Hurlingham (UnaHur). Equipo de desarrollo - Persistentes:
 
