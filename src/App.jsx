@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register"
 import NewPost from "./pages/NewPost"
 import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
+import Paginado from "./components/paginacion";
 
 
 function App() {
