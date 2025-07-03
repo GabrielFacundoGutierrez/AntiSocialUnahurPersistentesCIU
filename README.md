@@ -1,12 +1,50 @@
-# React + Vite
+# 💻 UnahurAntiSocial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🖱️ Objetivo
 
-Currently, two official plugins are available:
+El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red social académica donde los usuarios pueden registrarse, iniciar sesión, crear publicaciones con imágenes y etiquetas, comentar publicaciones de otros usuarios y gestionar su perfil.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💾 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** 19.1.0.
+- **React Router DOM** 7.6.3.
+- **Vite** como bundler.
+- **Node.js** y **npm** para la gestión de paquetes.
+- **ESLint** para análisis de código estático.
+- **Context API** para manejo global de usuario.
+
+---
+
+## 🗂️ Estructura del Proyecto
+
+```
+/mi-proyecto
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── header/
+│   │       └── BarraNavegacion.jsx
+│   ├── context/
+│   │   └── UserContext.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Profile.jsx
+│   │   ├── NewPost.jsx
+│   │   └── PostDetail.jsx
+│   ├── routes/
+│   │   └── routes.jsx
+│   ├── app.jsx
+│   ├── main.jsx
+│   ├── app.css
+│   └── index.css
+├── package.json
+├── vite.config.js
+├── index.html
+└── eslint.config.js
+```
