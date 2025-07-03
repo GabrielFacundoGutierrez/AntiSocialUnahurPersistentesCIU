@@ -13,18 +13,16 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className = "contenedor-home">
       <h2 className="encabezado-principal">Publicaciones Recientes</h2>
       {posts.length === 0 ? (
         <p>No hay publicaciones aún.</p>
-      ) : (<div>{
+      ) : (<div className = "posteo-padre">{
         posts.map(post => (
-          <div key={post._id} style={{ border: "1px solid #ccc", margin: "1em 0", padding: "1em" }}>
-            <h4>{post.Descripcion}</h4>
-            <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
-
-            {/* Etiquetas */}
-            {post.etiquetas?.length > 0 && (
+        
+          <div className = "posteo" key={post._id}>
+             
+           <div className = "info"> {post.etiquetas?.length > 0 && (
               <p>
                 <strong>Tags:</strong>{" "}
                 {post.etiquetas.map((tag, i) => (
@@ -33,17 +31,24 @@ export default function Home() {
               </p>
             )}
 
-            {/* Imágenes */}
-            {post.imagenes?.length > 0 && (
-              <div>
-                {post.imagenes.map((img, i) => (
-                  <img key={i} src={img.url} alt="imagen" style={{ width: "200px", margin: "5px" }} />
-                ))}
-              </div>
-            )}
+            <h4>{post.Descripcion}</h4>
+            <p><strong>Fecha:</strong> {new Date(post.FechaDeCreacion).toLocaleDateString()}</p>
 
             <p>{post.comentarios?.length || 0} comentario(s)</p>
             <Link to={`/post/${post._id}`} className="btn btn-primary">Ver más</Link>
+            </div>
+           
+
+            <div className = "imagenes-posteos">
+            {post.imagenes?.length > 0 && (
+              <div>
+                {post.imagenes.map((img, i) => (
+                  <img className = "imagenposteo" key={i} src={img.url} alt="imagen" />
+                ))}
+              </div>
+            )}
+            </div>
+            
           </div>
         ))
       }</div>
