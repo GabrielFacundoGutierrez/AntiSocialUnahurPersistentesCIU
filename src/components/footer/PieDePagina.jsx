@@ -11,19 +11,19 @@ const PieDePagina = () => {
         </div>
         <div className="author name">
           <p>Facundo Gutiérrez</p>
-          <a href="GabrielFacundoGutierrez">
+          <a href="https://github.com/GabrielFacundoGutierrez" target="blank">
             <img src="https://unavatar.io/github/gabrielfacundogutierrez" alt="Imagen de perfil" />
           </a>
         </div>
         <div className="author name">
           <p>Franco Cantero</p>
-          <a href="https://github.com/FrancoLuisCantero">
+          <a href="https://github.com/FrancoLuisCantero" target="blank">
             <img src="https://unavatar.io/github/francoluiscantero" alt="Imagen de perfil" />
           </a>
         </div>
         <div className="author name">
           <p>Luana Calderón</p>
-          <a href="https://github.com/LuanaCalderon">
+          <a href="https://github.com/LuanaCalderon" target="blank">
             <img src="https://unavatar.io/github/luanacalderon" alt="Imagen de perfil"/>
           </a>
         </div>
