@@ -21,32 +21,58 @@ El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red so
 
 ```
 /mi-proyecto
+├── node_modules/
 ├── public/
 │   └── vite.svg
 ├── src/
 │   ├── assets/
+│   │   ├── logo.ico
+│   │   └── logo.png
+│   │
 │   ├── components/
-│   │   └── header/
-│   │       └── BarraNavegacion.jsx
+│   │   ├── header/
+│   │   │   ├── BarraNavegacion.jsx
+│   │   │   └── BarraNavegacion.css
+│   │   │
+│   │   └── footer/
+│   │       ├── PieDePagina.jsx
+│   │       └── PieDePagina.css
+│   │
+│   ├── PrivateRoutes/
+│   │   └── PrivateRouter.jsx
+│   │
 │   ├── context/
 │   │   └── UserContext.jsx
+│   │
 │   ├── pages/
 │   │   ├── Home.jsx
+│   │   ├── Home.css
 │   │   ├── Login.jsx
+│   │   ├── Login.css
 │   │   ├── Register.jsx
+│   │   ├── Register.css
 │   │   ├── Profile.jsx
+│   │   ├── Profile.css
 │   │   ├── NewPost.jsx
-│   │   └── PostDetail.jsx
+│   │   ├── NewPost.css
+│   │   ├── PostDetail.jsx
+│   │   └── PostDetail.css
+│   │
 │   ├── routes/
 │   │   └── routes.jsx
+│   │
 │   ├── app.jsx
-│   ├── main.jsx
-│   ├── app.css
-│   └── index.css
-├── package.json
-├── vite.config.js
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
 ├── index.html
-└── eslint.config.js
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── readme.md
+└── vite.config.js
 ```
 ---
 
