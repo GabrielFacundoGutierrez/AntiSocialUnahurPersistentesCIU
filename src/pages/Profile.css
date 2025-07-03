@@ -13,3 +13,12 @@
   height: 300px;
 }
 
+.cerrar-sesion {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw
+}
+
+.publicaciones-encabezado {
+  text-align: left;
+}

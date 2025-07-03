@@ -22,13 +22,13 @@ export default function Profile() {
   if (!user) return <Navigate to="/login" />;
 
   return (
-   
+
     <div className="perfil-encabezado">
-      <h1 className="encabezado">Bienvenido: {user.nickName}</h1> 
-      <button onClick={() => logout()} className="btn btn-danger mb-4">
-       Cerrar sesión
+      <h1 className="encabezado">Bienvenido: {user.nickName}</h1>
+      <button onClick={() => logout()} className="btn btn-danger mb-4 cerrar-sesion">
+        Cerrar sesión
       </button>
-      <h2 className="mb-3">Mis Publicaciones</h2>
+      <h2 className="mb-3 publicaciones-encabezado">Mis Publicaciones</h2>
       {posts.length === 0 ? (
         <p>No has publicado nada todavía.</p>
       ) : (
@@ -53,14 +53,14 @@ export default function Profile() {
                 ))}
               </div>
             )}
-             <p>{post.comentarios?.length || 0} comentario(s)</p>
+            <p>{post.comentarios?.length || 0} comentario(s)</p>
             <Link to={`/post/${post._id}`} className="btn btn-primary">
-            Ver más
+              Ver más
             </Link>
           </div>
-  ))
+        ))
       )
-}
+      }
     </div >
   );
 }
