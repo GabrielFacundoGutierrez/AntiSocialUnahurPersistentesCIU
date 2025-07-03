@@ -70,9 +70,10 @@ export default function Home() {
           <div className="paginacion">
             {Array.from({ length: Math.ceil(posts.length / postsPorPagina) }).map((_, index) => (
               <button
+                
                 key={index}
                 onClick={() => cambiarPagina(index + 1)}
-                className={paginaActual === index + 1 ? 'active' : ''}
+                className={paginaActual === index + 1 ? 'active btn btn-primary' : 'btn btn-secondary'}
               >
                 {index + 1}
               </button>

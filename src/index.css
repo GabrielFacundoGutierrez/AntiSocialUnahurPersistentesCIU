@@ -57,3 +57,11 @@ nav a {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 5px;
+  flex-wrap: wrap;
+}
