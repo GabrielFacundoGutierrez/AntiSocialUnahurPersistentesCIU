@@ -24,7 +24,7 @@ export default function Profile() {
   return (
    
     <div className="container">
-      <h1>Bienvenido: {user.nickName}</h1> 
+      <h1 className="encabezado">Bienvenido: {user.nickName}</h1> 
       <button onClick={() => logout()} className="btn btn-danger mb-4">
        Cerrar sesión
       </button>
