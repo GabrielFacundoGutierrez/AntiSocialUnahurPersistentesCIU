@@ -48,3 +48,13 @@ El proyecto **UnahurAntiSocial** es una aplicación web desarrollada como red so
 ├── index.html
 └── eslint.config.js
 ```
+---
+
+## 🚀 Uso
+
+1. Clonar el repositorio.
+2. Instalar las dependencias con `npm install`.
+3. Ejecutar el servidor de desarrollo con `npm run dev`.
+4. Asegurarse de tener corriendo el backend en `http://localhost:3000/`.
+
+---
